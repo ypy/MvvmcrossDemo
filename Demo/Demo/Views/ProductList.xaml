@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage x:TypeArguments="viewModels:ProductViewModel"
+                     xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:core="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+                     xmlns:viewModels="clr-namespace:Demo.ViewModels;assembly=Demo"
+                     xmlns:bindings="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+                     x:Class="Demo.Views.ProductList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Product list view!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button bindings:Bi.nd="Text MainPageButtonText"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</core:MvxContentPage>

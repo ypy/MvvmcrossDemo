@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<core:MvxContentPage x:TypeArguments="viewModels:HomeViewModel"
+                     xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:core="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+                     xmlns:viewModels="clr-namespace:Demo.ViewModels;assembly=Demo"
+                     xmlns:bindings="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+                     x:Class="Demo.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource Welcome}" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand">
+            </Label>
+            <Entry bindings:Bi.nd="Text Text"></Entry>
+            <Button Text="click me" Command="{Binding ResetTextCommand}"/>
+            <Button Text="product" Command="{Binding GoToSecondPageCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</core:MvxContentPage>
