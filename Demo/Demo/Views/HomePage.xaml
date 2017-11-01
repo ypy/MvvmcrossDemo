@@ -13,8 +13,17 @@
                 HorizontalOptions="StartAndExpand">
             </Label>
             <Entry bindings:Bi.nd="Text Text"></Entry>
+            <ListView ItemsSource="{Binding RecordDatas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding RecordId}"
+                                  Detail="{Binding CreateTime}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button Text="click me" Command="{Binding ResetTextCommand}"/>
             <Button Text="product" Command="{Binding GoToSecondPageCommand}"/>
+            <Button Text="Add Product" Command="{Binding AddProductCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </core:MvxContentPage>

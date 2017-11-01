@@ -1,4 +1,5 @@
 using Acr.UserDialogs;
+using Demo.Sqlite;
 using Demo.ViewModels;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
@@ -10,6 +11,7 @@ namespace Demo
     {
         public override void Initialize()
         {
+            base.Initialize();
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
